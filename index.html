@@ -1,24 +1,11 @@
 <!DOCTYPE html>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src="GoogleOAuth.js"></script>
-
 <html>
-<head>
-	<title>SolidCore Consulting</title>
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
-	<meta name="google-signin-client_id" content="554678577110-6e38f6as8jdfch6poamt5ephouhbnrvh.apps.googleusercontent.com">
-</head>
-<body>
-	<h1>This page is currently in construction...</h1>
-	<p>Stay tuned...</p>
-	<div class="g-signin2" data-onsuccess="onSignIn"></div>	
-	<a href="#" onclick="signOut();">Sign out</a>
-	
-	
-	
-	<p>Drive API Quickstart-1</p>
+  <head>
+    <title>Drive API Quickstart</title>
+    <meta charset='utf-8' />
+  </head>
+  <body>
+    <p>Drive API Quickstart</p>
 
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" style="display: none;">Authorize</button>
@@ -28,9 +15,8 @@
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
-      var CLIENT_ID = '	
-554678577110-6e38f6as8jdfch6poamt5ephouhbnrvh.apps.googleusercontent.com';
-      var API_KEY = 'AIzaSyDfY5Llum6DSGIXJ_I7VgrRDzQQYXov_L8';
+      var CLIENT_ID = '<YOUR_CLIENT_ID>';
+      var API_KEY = '<YOUR_API_KEY>';
 
       // Array of API discovery doc URLs for APIs used by the quickstart
       var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
@@ -138,5 +124,5 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-</body>
+  </body>
 </html>
