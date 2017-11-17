@@ -1,17 +1,3 @@
-// Client ID and API key from the Developer Console
-var CLIENT_ID = '554678577110-6e38f6as8jdfch6poamt5ephouhbnrvh.apps.googleusercontent.com';
-var API_KEY = 'AIzaSyDfY5Llum6DSGIXJ_I7VgrRDzQQYXov_L8';
-
-// Array of API discovery doc URLs for APIs used by the quickstart
-var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
-
-// Authorization scopes required by the API; multiple scopes can be
-// included, separated by spaces.
-var SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
-
-var authorizeButton = document.getElementById('authorize-button');
-var signoutButton = document.getElementById('signout-button');
-
 function onSignIn(googleUser) {
 	var profile = googleUser.getBasicProfile();
 	console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -19,7 +5,7 @@ function onSignIn(googleUser) {
 	console.log('Image URL: ' + profile.getImageUrl());
 	console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 	
-	handleClientLoad();
+	
 }
 
 function signOut() {
