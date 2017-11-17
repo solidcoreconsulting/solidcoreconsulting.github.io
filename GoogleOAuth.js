@@ -1,9 +1,7 @@
+var profile;
+
 function onSignIn(googleUser) {
-	var profile = googleUser.getBasicProfile();
-	console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-	console.log('Name: ' + profile.getName());
-	console.log('Image URL: ' + profile.getImageUrl());
-	console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+	profile = googleUser.getBasicProfile();
 }
 
 function signOut() {
@@ -12,6 +10,18 @@ function signOut() {
 	console.log('User signed out.');
 	});
 }
+
+function print(){
+	document.write('ID: ' + profile.getId() +  "<br>"); // Do not send to your backend! Use an ID token instead.
+	document.write('Name: ' + profile.getName()+  "<br>");
+	document.write('Image URL: ' + profile.getImageUrl()+  "<br>");
+	document.write('Email: ' + profile.getEmail()+  "<br>"); // This is null if the 'email' scope is not present.
+}
+
+
+
+
+
 
 /**
 *  On load, called to load the auth2 library and API client library.
