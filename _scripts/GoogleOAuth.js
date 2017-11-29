@@ -2,10 +2,7 @@ var profile;
 
 function onSignIn(googleUser) {
 	profile = googleUser.getBasicProfile();
-
-	// .then{
-	// 	window.location = 'test.html';
-	// };
+	window.location = 'test.html';
 }
 
 function signOut() {
