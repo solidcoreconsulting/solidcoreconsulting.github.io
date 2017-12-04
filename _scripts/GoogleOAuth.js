@@ -2,17 +2,19 @@ var profile;
 
 function onSignIn(googleUser) {
 	profile = googleUser.getBasicProfile();
-	window.location = 'test.html';
+	window.location.href = 'test.html';
 }
 
 function signOut() {
-	var auth2 = gapi.auth2.getAuthInstance();
-	auth2.signOut().then(function () {
-		console.log('User signed out.');
-	});
-	// auth2.signOut().then(function () {
-	//
-	// });
+	gapi.load('auth2', function() {
+		gapi.auth2.init(name).then(function(){
+			gapi.auth2.getAuthInstance().signOut().then(function () {
+				gapi.auth2.getAuthInstance().disconnect();
+				window.location.href = "index.html"
+			});
+		});
+	})
+	console.log('User signed out.');
 }
 
 function print(){
