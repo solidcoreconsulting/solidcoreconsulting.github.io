@@ -3,15 +3,66 @@
 <script src="GoogleOAuth.js"></script>
 
 <html>
-  <head>
-    <title>SolidCore Consulting</title>
-    <meta charset='utf-8' />
-	<meta name="google-signin-client_id" content="554678577110-6e38f6as8jdfch6poamt5ephouhbnrvh.apps.googleusercontent.com">
-	<script src="https://viewer.altium.com/client/static/js/embed.js"></script>
-  </head>
- <body>
-  	<h1>This page is currently in construction...</h1>
-	<p>Stay tuned....</p>
+
+<head>
+  <title>SolidCore Consulting</title>
+  <link rel="icon" href="_includes/Logo_Back.jpg" type="image/gif" sizes="16x16">
+  <meta charset='utf-8' />
+  <meta name="google-signin-client_id" content="554678577110-6e38f6as8jdfch6poamt5ephouhbnrvh.apps.googleusercontent.com">
+  <!--This may be wrong... https://www.w3schools.com/howto/howto_css_login_form.asp -->
+  <link rel="stylesheet" href="/css/Login.css">
+  <script src="https://viewer.altium.com/client/static/js/embed.js"></script>
+  <script src="/_scripts/Scripts.js"></script>
+</head>
+
+<body>
+  <h1>This page is currently in construction...</h1>
+  <p>Stay tuned....</p>
+  <h2>Modal Login Form</h2>
+
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+  <div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  <!-- A365 embedded viewer -->
+  <!--
   <p>Oculus DK2's sample board</p>
   <div
     class="altium-ecad-viewer"
@@ -23,10 +74,12 @@
     border-width: 1px; border-color: rgb(241, 241, 241);
     overflow: hidden; max-width: 1280px;
     max-height: 700px; box-sizing: border-box;">
-  </div>
+  </div> -->
+
   <!--
     Oculus Gerbers (Altium link): 10efee7a-5b64-4af5-9d60-4e8b02724224
     Oculus Design (IIS Web Server link): http://dev-aeteam03/Sharing/Public/RiftDK2-master.zip
   -->
 </body>
+
 </html>
